@@ -1,6 +1,40 @@
-# Getting Started with Create React App
+# Space Travelers Hub
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+A web application for a company that provides commercial and scientific space travel services. The application will allow users to book rockets and join selected space missions.
+
+<!-- ![Book store Home page (20)]() COMMING SOON -->
+
+
+<!-- ## Live demo comming soon
+
+[Live Demo Link on Netlify](https://serene-zabaione-53a1d6.netlify.app/) SOON-->
+
+## Built With
+
+- HTML
+- CSS
+- JavaScript
+- React
+- Redux
+
+### Prerequisites
+
+- VScode or other editor
+
+### Install
+
+#### Cloning the project
+
+ git clone https://github.com/sentayhu19/Space-Travelers-Hub <Your-Build-Directory>
+``` 
+- cd bookstore
+- npm install # Local dependencies if you want to hack
+- npm install -g # Install globally 
+- npm start
+```
+
 
 ## Available Scripts
 
@@ -39,32 +73,34 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Authors
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+👤 **Sentayhu Berhanu**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- GitHub: [@sentayhu19](https://github.com/sentayhu19)
+- LinkedIn: [sentayhu-berhanu](https://www.linkedin.com/in/sentayhu-berhanu-6376579a/)
 
-### Code Splitting
+👤 **Nwachan Theophile**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- GitHub: [@Nwachan](https://github.com/Theophileaseh)
+- LinkedIn: [sentayhu-berhanu](https://www.linkedin.com/in/nwachan-theophile/)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🤝 Contributing
 
-### Making a Progressive Web App
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Feel free to check the [issues page](https://github.com/sentayhu19/Bookstore/issues).
 
-### Advanced Configuration
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Give a ⭐️ if you like this project!
 
-### Deployment
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+-This project was inspired by [Microverse](https://www.microverse.org)
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 📝 License
+
+This project is [MIT](./LICENSE) licensed.![](https://img.shields.io/badge/Microverse-blueviolet)
