@@ -1,8 +1,19 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navigation from './layouts/navigation';
+import Rockets from './components/Rockets/rockets';
+import Missions from './components/missions/missions';
+import MyProfile from './components/myProfile/myProfile';
+
 function App() {
   return (
-    <div className="App">
-      <h1>Space-Travelers-Hub </h1>
-    </div>
+    <Router>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Rockets />} />
+        <Route path="/mission" element={<Missions />} />
+        <Route path="/myprofile" element={<MyProfile />} />
+      </Routes>
+    </Router>
   );
 }
 
