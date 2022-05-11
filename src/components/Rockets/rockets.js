@@ -1,29 +1,5 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import Rocket from './Rocket';
-import './AllRockets.css';
-import { getRocketList } from '../../redux/rockets/reducers';
+import React from 'react';
 
-const AllRockets = () => {
-  const dispatchAction = useDispatch();
-  const rockets = useSelector((state) => state.rocketsReducer);
+const Rockets = () => <h2>Rockets</h2>;
 
-  useEffect(() => {
-    dispatchAction(getRocketList());
-  }, [dispatchAction]);
-
-  return (
-    rockets.map((rocket) => (
-      <div key={rocket.id}>
-        <Rocket
-          id={rocket.id}
-          name={rocket.name}
-          img={rocket.img}
-          desc={rocket.desc}
-        />
-      </div>
-    ))
-  );
-};
-
-export default AllRockets;
+export default Rockets;
