@@ -1,36 +1,18 @@
-import axios from 'axios';
+const ADD_RESERVATION = './space-travelers/rockets/ADD_RESERVATION';
+const DELETE_RESERVATION = './space-travelers/rockets/DELETE_RESERVATION';
+const GET_ROCKETS = './space-travelers/rockets/GET_ROCKETS';
 
-// Action types
-export const FETCH_ROCKETS_REQUEST = 'FETCH_ROCKETS_REQUEST';
-export const FETCH_ROCKETS_SUCCESS = 'FETCH_ROCKETS_SUCCESS';
-export const FETCH_ROCKETS_FAILURE = 'FETCH_ROCKETS_FAILURE';
-
-// Action Creators
-const fetchRocketsRequest = () => ({
-  type: FETCH_ROCKETS_REQUEST,
+export const addReservation = (payload) => ({
+  type: ADD_RESERVATION,
+  payload,
 });
 
-const fetchRocketsSuccess = (rockets) => ({
-  type: FETCH_ROCKETS_SUCCESS,
-  payload: rockets,
+export const getRockets = (payload) => ({
+  type: GET_ROCKETS,
+  payload,
 });
 
-const fetchRocketsFailure = (error) => ({
-  type: FETCH_ROCKETS_FAILURE,
-  payload: error,
+export const deleteReservation = (payload) => ({
+  type: DELETE_RESERVATION,
+  payload,
 });
-
-export const fetchRockets = () => (dispatch) => {
-  dispatch(fetchRocketsRequest);
-  axios.get('https://api.spacexdata.com/v3/rockets')
-    .then((response) => {
-      const rockets = response.data;
-      dispatch(fetchRocketsSuccess(rockets));
-    })
-    .catch((error) => {
-      const errorMsg = error.message;
-      dispatch(fetchRocketsFailure(errorMsg));
-    });
-};
-
-export default fetchRockets;
