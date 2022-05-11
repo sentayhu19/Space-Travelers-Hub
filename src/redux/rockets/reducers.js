@@ -1,29 +1,32 @@
 import * as actions from './action';
 
-const initState = {
-  rockets: [],
-};
-const rocketReducer = (state = initState, action) => {
+const stateInit = [];
+const url = 'https://api.spacexdata.com/v3/rockets';
+
+const rocketsReducer = (state = stateInit, action) => {
   switch (action.type) {
-    case actions.FETCH_ROCKETS_REQUEST:
-      return {
-        ...state,
-        loading: true,
-      };
-    case actions.FETCH_ROCKETS_SUCCESS:
-      return {
-        loading: false,
-        rockets: action.payload,
-        error: '',
-      };
-    case actions.FETCH_ROCKETS_FAILURE:
-      return {
-        loading: false,
-        rockets: [],
-        error: action.payload,
-      };
+    case actions.addReservation:
+      return [...state, action.payload];
+    case actions.getRockets:
+      return action.payload;
+    case actions.deleteReservation:
+      return state.filter((rocket) => rocket.id !== action.payload.id);
     default:
       return state;
   }
 };
-export default rocketReducer;
+
+export const getRocketList = () => async (dispatch) => {
+  const rocketList = await fetch(`${url}`)
+    .then((resp) => resp.json());
+  const infoArr = [];
+  rocketList.map((rocket) => infoArr.push({
+    id: rocket.id,
+    desc: rocket.description,
+    name: rocket.rocket_name,
+    img: rocket.flickr_images[0],
+  }));
+  dispatch(actions.getRockets(infoArr));
+};
+
+export default rocketsReducer;
