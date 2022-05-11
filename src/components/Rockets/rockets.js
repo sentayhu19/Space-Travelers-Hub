@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import Rocket from './Rocket';
 import { getRocketList } from '../../redux/rockets/reducers';
 
-const AllRockets = () => {
+const Rockets = () => {
   const dispatchAction = useDispatch();
   const rockets = useSelector((state) => state.rocketsReducer);
 
@@ -25,17 +25,4 @@ const AllRockets = () => {
   );
 };
 
-export default AllRockets;
-
-/*
-  <div className="main-rocket" id="{rocket.id}">
-    <div className="rocket-img">
-      <img src="${rocket.flickr_images }" alt="Rocket Image" />
-    </div>
-    <div className="rocket-info">
-      <h3 className="rocket-name">{rocket.rocket_name}</h3>
-      <p className="rocket-desc">{rocket.description}</p>
-      <button type="button" className="rocket-action">Reserve Rocket</button>
-    </div>
-  </div>;
-*/
+export default Rockets;
