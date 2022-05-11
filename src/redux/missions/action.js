@@ -15,7 +15,6 @@ export const fetchError = () => ({
 
 export const getMission = () => (dispatch) => {
   Url.get().then((res) => {
-    console.log('am fetching from API ->', res.data);
     dispatch(fetchMission(res.data));
   }).catch(() => {
     dispatch(fetchError());

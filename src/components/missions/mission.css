@@ -1,0 +1,21 @@
+:root {
+    --tableodd: rgb(244, 242, 242);
+}
+
+table,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table{
+    margin: 20px 5%;
+}
+tr:nth-child(odd) {
+    background-color:var(--tableodd)
+}
+.member{
+    width: 130px;
+}
+.join {
+    width: 130px;
+    height: 34px;
+}
