@@ -25,4 +25,9 @@ const Rockets = () => {
   );
 };
 
+<<<<<<< HEAD
+=======
+const Rockets = () => <h2>Rockets</h2>;
+
+>>>>>>> all-feature
 export default Rockets;

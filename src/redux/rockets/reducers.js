@@ -1,8 +1,15 @@
 import * as actions from './action';
 
+<<<<<<< HEAD
 const stateInit = [];
 const url = 'https://api.spacexdata.com/v3/rockets';
 
+=======
+const url = 'https://api.spacexdata.com/v3/rockets';
+
+const stateInit = [];
+
+>>>>>>> all-feature
 const rocketsReducer = (state = stateInit, action) => {
   switch (action.type) {
     case actions.addReservation:
