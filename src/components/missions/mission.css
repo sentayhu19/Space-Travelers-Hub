@@ -40,9 +40,6 @@ tr:nth-child(odd) {
   border-radius: 4px;
 }
 
-.leave:active{
-  box-shadow: 2px 2px 2px 2px red;
-}
 .leave {
   width: 130px;
   height: 34px;
@@ -51,4 +48,8 @@ tr:nth-child(odd) {
   border: 1px solid red;
   margin: 20px 10px;
   border-radius: 4px;
+}
+
+.leave:active {
+  box-shadow: 2px 2px 2px 2px red;
 }
