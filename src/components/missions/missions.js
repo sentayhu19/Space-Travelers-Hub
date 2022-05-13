@@ -1,11 +1,9 @@
-/* eslint-disable  no-unused-vars */
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { generate } from 'randomized-string';
-
 import { alphanumeric } from 'randomized-string/lib/types';
 import { getMission } from '../../redux/missions/action';
-import missionReducer from '../../redux/missions/reducers';
+
 import Mission from './mission';
 
 const Missions = () => {
@@ -13,7 +11,18 @@ const Missions = () => {
   useEffect(() => {
     dispatch(getMission());
   }, []);
-  const { missions, fetcherror } = useSelector((state) => state.missionReducer);
+  const { missions, fetcherror, joinedMissions } = useSelector((state) => state.missionReducer);
+  const checkIsJoined = (id) => {
+    try {
+      const x = joinedMissions.filter((ids) => ids === id);
+      if (x[0] === id) {
+        return true;
+      }
+    } catch (err) {
+      dispatch(fetcherror());
+    }
+    return false;
+  };
   return (
     <div>
       <table>
@@ -31,6 +40,7 @@ const Missions = () => {
               missionName={mission.mission_name}
               id={mission.mission_id}
               description={mission.description}
+              IsJoined={checkIsJoined(mission.mission_id)}
               key={generate({ charset: alphanumeric, length: 32 })}
             />
           ))}

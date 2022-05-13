@@ -17,11 +17,39 @@ tr:nth-child(odd) {
   background-color: var(--tableodd);
 }
 
-.member {
+.memeber {
   width: 130px;
+  margin: 20px 10px;
+  background-color: rgb(77, 138, 160);
+  color: white;
+  border-radius: 4px;
+}
+
+.not-member {
+  width: 130px;
+  margin: 20px 10px;
+  background-color: rgb(109, 109, 111);
+  color: white;
+  border-radius: 4px;
 }
 
 .join {
   width: 130px;
   height: 34px;
+  margin: 20px 10px;
+  border-radius: 4px;
+}
+
+.leave {
+  width: 130px;
+  height: 34px;
+  color: red;
+  background-color: white;
+  border: 1px solid red;
+  margin: 20px 10px;
+  border-radius: 4px;
+}
+
+.leave:active {
+  box-shadow: 2px 2px 2px 2px red;
 }
