@@ -29,3 +29,12 @@
   border-radius: 3px;
   font-size: 16px;
 }
+
+.rocket-action-cancel {
+  background: #fff;
+  border: 1px solid grey;
+  color: grey;
+  padding: 10px;
+  border-radius: 3px;
+  font-size: 16px;
+}

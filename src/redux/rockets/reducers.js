@@ -6,15 +6,16 @@ const url = axios.create({ baseURL: 'https://api.spacexdata.com/v3/rockets' });
 
 const rocketsReducer = (state = stateInit, action) => {
   switch (action.type) {
-    case actions.ADD_RESERVATION:
-      return [
-        ...state,
-        action.payload,
-      ];
+    case actions.ADD_RESERVATION: {
+      const nextState = state.map((rocket) => (
+        (rocket.id !== action.payload) ? rocket : { ...rocket, reserv: true }));
+      return [...nextState];
+    }
     case actions.GET_ROCKETS:
       return action.payload;
     case actions.DELETE_RESERVATION:
-      return state.filter((rocket) => rocket.id !== action.payload.id);
+      return state.map((rocket) => (
+        (rocket.id !== action.payload) ? rocket : { ...rocket, reserv: false }));
     default:
       return state;
   }
@@ -40,4 +41,3 @@ export const getRocketList = () => (dispatch) => {
 };
 
 export default rocketsReducer;
-console.log(rocketsReducer);
