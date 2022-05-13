@@ -5,12 +5,12 @@ import {
 } from 'redux';
 import thunk from 'redux-thunk';
 import missionReducer from './missions/reducers';
-import rocketReducer from './rockets/reducers';
+import rocketsReducer from './rockets/reducers';
 
 const initState = {};
 const rootReducer = combineReducers({
   missionReducer,
-  rocketReducer,
+  rocketsReducer,
 });
 
 const store = createStore(rootReducer, initState, applyMiddleware(thunk));
