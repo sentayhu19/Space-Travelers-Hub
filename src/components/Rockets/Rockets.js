@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Rocket from './Rocket';
 import { getRocketList } from '../../redux/rockets/reducers';
+import './Rockets.css';
 
 const Rockets = () => {
   const dispatchAction = useDispatch();
