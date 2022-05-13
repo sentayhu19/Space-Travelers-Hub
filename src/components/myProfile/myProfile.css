@@ -1,0 +1,11 @@
+.joined-mission-table,
+tr,
+td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  width: 45%;
+}
+
+.mission-title {
+  margin: 10px 5%;
+}

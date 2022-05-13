@@ -27,7 +27,7 @@ const Navigation = () => (
         </NavLink>
         <span>|</span>
         <NavLink
-          to="/rockets"
+          to="/myprofile"
         >
           My profile
         </NavLink>
