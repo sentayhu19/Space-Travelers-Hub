@@ -40,4 +40,3 @@ export const getRocketList = () => (dispatch) => {
 };
 
 export default rocketsReducer;
-console.log(rocketsReducer);
