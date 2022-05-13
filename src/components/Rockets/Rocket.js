@@ -12,7 +12,7 @@ const Rocket = ({
       <p className="rocket-desc">{desc}</p>
       <button type="button" className="rocket-action">Reserve Rocket</button>
     </div>
-    <h1>Hello</h1>
+    <h1>Helloooo</h1>
   </div>
 );
 

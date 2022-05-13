@@ -1,19 +1,16 @@
+import axios from 'axios';
 import * as actions from './action';
 
-<<<<<<< HEAD
 const stateInit = [];
-const url = 'https://api.spacexdata.com/v3/rockets';
+const url = axios.create({ baseURL: 'https://api.spacexdata.com/v3/rockets' });
 
-=======
-const url = 'https://api.spacexdata.com/v3/rockets';
-
-const stateInit = [];
-
->>>>>>> all-feature
 const rocketsReducer = (state = stateInit, action) => {
   switch (action.type) {
     case actions.addReservation:
-      return [...state, action.payload];
+      return [
+        ...state,
+        action.payload,
+      ];
     case actions.getRockets:
       return action.payload;
     case actions.deleteReservation:
@@ -22,7 +19,7 @@ const rocketsReducer = (state = stateInit, action) => {
       return state;
   }
 };
-
+/*
 export const getRocketList = () => async (dispatch) => {
   const rocketList = await fetch(`${url}`)
     .then((resp) => resp.json());
@@ -34,6 +31,13 @@ export const getRocketList = () => async (dispatch) => {
     img: rocket.flickr_images[0],
   }));
   dispatch(actions.getRockets(infoArr));
+}; */
+
+export const getRocketList = () => (dispatch) => {
+  url.get().then((res) => {
+    dispatch(actions.getRockets(res.data));
+  });
 };
 
 export default rocketsReducer;
+console.log(rocketsReducer);

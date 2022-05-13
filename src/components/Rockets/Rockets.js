@@ -12,22 +12,18 @@ const Rockets = () => {
   }, [dispatchAction]);
 
   return (
-    rockets.map((rocket) => (
-      <div key={rocket.id}>
+    <div className="rockets-list">
+      { rockets.map((rocket) => (
         <Rocket
+          key={rocket.id}
           id={rocket.id}
-          name={rocket.name}
-          img={rocket.img}
-          desc={rocket.desc}
+          name={rocket.rocket_name}
+          img={rocket.flickr_images[0]}
+          desc={rocket.description}
         />
-      </div>
-    ))
+      )) }
+    </div>
   );
 };
 
-<<<<<<< HEAD
-=======
-const Rockets = () => <h2>Rockets</h2>;
-
->>>>>>> all-feature
 export default Rockets;
