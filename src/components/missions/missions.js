@@ -1,7 +1,12 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+<<<<<<< HEAD
 // import { generate } from 'randomized-string';
 // import { alphanumeric } from 'randomized-string/lib/types';
+=======
+import { generate } from 'randomized-string';
+import { alphanumeric } from 'randomized-string/lib/types';
+>>>>>>> all-feature
 import { getMission } from '../../redux/missions/action';
 
 import Mission from './mission';
@@ -41,7 +46,11 @@ const Missions = () => {
               id={mission.mission_id}
               description={mission.description}
               IsJoined={checkIsJoined(mission.mission_id)}
+<<<<<<< HEAD
               key={1}
+=======
+              key={generate({ charset: alphanumeric, length: 32 })}
+>>>>>>> all-feature
             />
           ))}
         </tbody>
