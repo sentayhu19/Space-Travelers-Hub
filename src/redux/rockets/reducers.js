@@ -19,7 +19,7 @@ const rocketsReducer = (state = stateInit, action) => {
       d.forEach((e) => {
         e.reserv = false;
       });
-      return [...d];
+      return [...state,...d];
     case actions.DELETE_RESERVATION:
       x = state.map((rocket) => (
         (rocket.id !== action.payload) ? rocket : { ...rocket, reserv: false }));
