@@ -1,29 +1,29 @@
 import axios from 'axios';
 import * as actions from './action';
 
-const stateInit = {
-  rockets: [],
-  reserv: false,
-};
+const stateInit = [];
 const url = axios.create({ baseURL: 'https://api.spacexdata.com/v3/rockets' });
 
 const rocketsReducer = (state = stateInit, action) => {
+  let d;
+  let x;
   switch (action.type) {
     case actions.ADD_RESERVATION: {
-      console.log('at reducer state :', state);
-      const nextState = state.rockets.map((rocket) => (
+      const nextState = state.map((rocket) => (
         (rocket.id !== action.payload) ? rocket : { ...rocket, reserv: true }));
-      return { ...state, ...nextState };
+      d = nextState;
+      return [...d];
     }
     case actions.GET_ROCKETS:
-      console.log('action pay ', action.payload);
-      return {
-        ...state,
-        rockets: action.payload,
-      };
+      d = action.payload;
+      d.forEach((e) => {
+        e.reserv = false;
+      });
+      return [...d];
     case actions.DELETE_RESERVATION:
-      return state.map((rocket) => (
+      x = state.map((rocket) => (
         (rocket.id !== action.payload) ? rocket : { ...rocket, reserv: false }));
+      return x;
     default:
       return state;
   }

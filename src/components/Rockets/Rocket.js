@@ -13,7 +13,6 @@ const Rocket = ({
   const reserveBtn = (<button type="button" id="reserveBtn" onClick={reserve} className="rocket-action">Reserve Rocket</button>);
   const deleteBtn = (<button type="button" id="cancelBtn" onClick={cancel} className="rocket-action-cancel">Cancel Reservation</button>);
   const reserved = (<mark id="reserved">Reserved</mark>);
-  console.log(reserv);
   return (
     <div className="main-rocket" id={id}>
       <div className="rocket-img">
