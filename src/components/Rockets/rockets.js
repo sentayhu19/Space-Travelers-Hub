@@ -11,9 +11,11 @@ const Rockets = () => {
   useEffect(() => {
     dispatchAction(getRocketList());
   }, []);
+  console.log('Data: ', rockets);
   return (
     <div className="rockets-list">
-      { rockets.map((rocket) => (
+      { rockets.map((rocket, i) => (
+
         <Rocket
           key={generate()}
           id={rocket.id}
@@ -21,6 +23,7 @@ const Rockets = () => {
           img={rocket.flickr_images[0]}
           desc={rocket.description}
           reserv={rocket.reserv}
+          i={i}
         />
       )) }
     </div>

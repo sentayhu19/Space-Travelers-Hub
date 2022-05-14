@@ -9,7 +9,23 @@ const MyProfile = () => {
   const { missions, joinedMissions } = Joined;
   const YouJoined = missions.filter((ids, i) => ids.mission_id === joinedMissions[i]);
   const rocketReserved = rockets.filter((r) => r.reserv === true);
-  console.log('Rockets reserved', rocketReserved[0]);
+
+  const uniqueIds = [];
+
+  const unique = rocketReserved.filter(element => {
+    const isDuplicate = uniqueIds.includes(element.rocket_name);
+  
+    if (!isDuplicate) {
+      uniqueIds.push(element.rocket_name);
+  
+      return true;
+    }
+  
+    return false;
+  });
+  console.log('before filer', rocketReserved)
+console.log("after fil Data -> ",uniqueIds)
+
   return (
     <>
       <div className="joined wrap">
@@ -36,10 +52,10 @@ const MyProfile = () => {
 
             <table className="joined-mission-table1">
               <tbody key={generate()}>
-                {rocketReserved.map((r) => (
+                {uniqueIds.map((r) => (
                   <tr key={generate()}>
                     <td key={generate()}>
-                      <p className="joined-mission" key={generate()}>{r.rocket_name}</p>
+                      <p className="joined-mission" key={generate()}>{r}</p>
                     </td>
                   </tr>
 
