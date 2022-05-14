@@ -27,3 +27,8 @@ td {
 .reserve {
   margin-right: 37%;
 }
+
+.notmember {
+  background-color: red;
+  color: white;
+}

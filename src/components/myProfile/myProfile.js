@@ -9,7 +9,18 @@ const MyProfile = () => {
   const { missions, joinedMissions } = Joined;
   const YouJoined = missions.filter((ids, i) => ids.mission_id === joinedMissions[i]);
   const rocketReserved = rockets.filter((r) => r.reserv === true);
-
+  let missionempty;
+  let rocketempty;
+  if (rocketReserved.length === 0) {
+    rocketempty = true;
+  } else {
+    rocketempty = false;
+  }
+  if (YouJoined.length === 0) {
+    missionempty = true;
+  } else {
+    missionempty = false;
+  }
   const Data = [];
 
   rocketReserved.filter((element) => {
@@ -23,7 +34,6 @@ const MyProfile = () => {
 
     return false;
   });
-
   return (
     <>
       <div className="joined wrap">
@@ -35,6 +45,7 @@ const MyProfile = () => {
           <div className="joined-missions">
             <table className="joined-mission-table1">
               <tbody key={generate()}>
+                { missionempty ? <tr><td><p className="notmember">You have not joined any missions</p></td></tr> : '' }
                 {YouJoined.map((j) => (
 
                   <tr key={generate()}>
@@ -50,6 +61,7 @@ const MyProfile = () => {
 
             <table className="joined-mission-table1">
               <tbody key={generate()}>
+                { rocketempty ? <tr><td><p className="notmember">You have not reserved any missions</p></td></tr> : '' }
                 {Data.map((r) => (
                   <tr key={generate()}>
                     <td key={generate()}>
