@@ -11,7 +11,6 @@ const Rockets = () => {
   useEffect(() => {
     dispatchAction(getRocketList());
   }, []);
-  console.log('Data: ', rockets);
   return (
     <div className="rockets-list">
       { rockets.map((rocket, i) => (

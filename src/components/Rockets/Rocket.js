@@ -40,6 +40,7 @@ Rocket.propTypes = {
   desc: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
   reserv: PropTypes.bool.isRequired,
+  i: PropTypes.number.isRequired,
 };
 
 export default Rocket;

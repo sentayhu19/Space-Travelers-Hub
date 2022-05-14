@@ -3,7 +3,7 @@ import '@testing-library/jest-dom/extend-expect';
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import store from '../../../redux/configureStore';
-import Missions from '../missions.js';
+import Missions from '../missions';
 
 const Mission = [
   {
@@ -11,7 +11,7 @@ const Mission = [
     key: '1',
     id: '1',
     description: 'Falcon 1',
-    IsJoined: false
+    IsJoined: false,
   },
 ];
 

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import './mission.css';
 import { useDispatch } from 'react-redux';
 import { JoinMission, leaveMission } from '../../redux/missions/action';
+
 const Mission = ({
   missionName, id, description, IsJoined,
 }) => {
@@ -53,4 +54,3 @@ Mission.propTypes = {
   IsJoined: PropTypes.bool.isRequired,
 };
 export default Mission;
-

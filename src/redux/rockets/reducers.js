@@ -28,22 +28,8 @@ const rocketsReducer = (state = stateInit, action) => {
       return state;
   }
 };
-/*
-export const getRocketList = () => async (dispatch) => {
-  const rocketList = await fetch(`${url}`)
-    .then((resp) => resp.json());
-  const infoArr = [];
-  rocketList.map((rocket) => infoArr.push({
-    id: rocket.id,
-    desc: rocket.description,
-    name: rocket.rocket_name,
-    img: rocket.flickr_images[0],
-  }));
-  dispatch(actions.getRockets(infoArr));
-}; */
 
 export const getRocketList = () => (dispatch) => {
-  console.log('get rocket called!');
   url.get().then((res) => {
     dispatch(actions.getRockets(res.data));
   });
