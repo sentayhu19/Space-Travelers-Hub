@@ -15,8 +15,8 @@ const Mission = [
   },
 ];
 
-describe('Test the Rockets Component', () => {
-  it('rockets section renders', () => {
+describe('Test the mission Component', () => {
+  it('mission section renders', () => {
     const { container } = render(
       <Provider store={store}>
         <Missions key={Mission[0].id} mission={Mission[0]} />
