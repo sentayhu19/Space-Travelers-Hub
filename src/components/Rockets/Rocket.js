@@ -7,14 +7,14 @@ const Rocket = ({
   id, desc, name, img, reserv,
 }) => {
   const dispatchAction = useDispatch();
-
   const reserve = () => dispatchAction(addReservation(id));
   const cancel = () => dispatchAction(deleteReservation(id));
 
   const reserveBtn = (<button type="button" id="reserveBtn" onClick={reserve} className="rocket-action">Reserve Rocket</button>);
   const deleteBtn = (<button type="button" id="cancelBtn" onClick={cancel} className="rocket-action-cancel">Cancel Reservation</button>);
   const reserved = (<mark id="reserved">Reserved</mark>);
-
+  console.log(reserv);
+  return (
     <div className="main-rocket" id={id}>
       <div className="rocket-img">
         <img src={img} alt={name} className="main-img" />
@@ -28,7 +28,8 @@ const Rocket = ({
         </p>
         {(reserv === false) ? reserveBtn : deleteBtn }
       </div>
-    </div>;
+    </div>
+  );
 };
 
 Rocket.propTypes = {
@@ -36,7 +37,7 @@ Rocket.propTypes = {
   name: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
-  // reserv: PropTypes.bool.isRequired,
+  reserv: PropTypes.bool.isRequired,
 };
 
 export default Rocket;

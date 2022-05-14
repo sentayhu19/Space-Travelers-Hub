@@ -6,9 +6,10 @@ import './Rockets.css';
 
 const Rockets = () => {
   const dispatchAction = useDispatch();
-  const rockets = useSelector((state) => state.rocketsReducer);
+  const { rockets, reserv } = useSelector((state) => state.rocketsReducer);
 
   useEffect(() => {
+    console.log('Inside console.log');
     dispatchAction(getRocketList());
   }, [dispatchAction]);
 
@@ -21,6 +22,7 @@ const Rockets = () => {
           name={rocket.rocket_name}
           img={rocket.flickr_images[0]}
           desc={rocket.description}
+          reserv={rocket.reserv}
         />
       )) }
     </div>

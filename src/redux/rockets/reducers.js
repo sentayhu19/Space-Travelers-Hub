@@ -1,7 +1,10 @@
 import axios from 'axios';
 import * as actions from './action';
 
-const stateInit = [];
+const stateInit = {
+  rockets: [],
+  reserv: false,
+};
 const url = axios.create({ baseURL: 'https://api.spacexdata.com/v3/rockets' });
 
 const rocketsReducer = (state = stateInit, action) => {
@@ -12,7 +15,11 @@ const rocketsReducer = (state = stateInit, action) => {
       return [...nextState];
     }
     case actions.GET_ROCKETS:
-      return action.payload;
+      console.log('action pay ', action.payload);
+      return {
+        ...state,
+        rockets: action.payload,
+      };
     case actions.DELETE_RESERVATION:
       return state.map((rocket) => (
         (rocket.id !== action.payload) ? rocket : { ...rocket, reserv: false }));
@@ -35,6 +42,7 @@ export const getRocketList = () => async (dispatch) => {
 }; */
 
 export const getRocketList = () => (dispatch) => {
+  console.log('get rocket called!');
   url.get().then((res) => {
     dispatch(actions.getRockets(res.data));
   });
