@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the Rockets Component rockets section renders 1`] = `
+<div>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <td>
+            Mission
+          </td>
+          <td>
+            Description
+          </td>
+          <td>
+            Status
+          </td>
+          <td />
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Test the mission Component mission section renders 1`] = `
+<div>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <td>
+            Mission
+          </td>
+          <td>
+            Description
+          </td>
+          <td>
+            Status
+          </td>
+          <td />
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</div>
+`;
+
+exports[`Test the mission Component rockets section renders 1`] = `
+<div>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <td>
+            Mission
+          </td>
+          <td>
+            Description
+          </td>
+          <td>
+            Status
+          </td>
+          <td />
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</div>
+`;
