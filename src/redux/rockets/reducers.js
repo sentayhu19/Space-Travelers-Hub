@@ -10,9 +10,10 @@ const url = axios.create({ baseURL: 'https://api.spacexdata.com/v3/rockets' });
 const rocketsReducer = (state = stateInit, action) => {
   switch (action.type) {
     case actions.ADD_RESERVATION: {
-      const nextState = state.map((rocket) => (
+      console.log('at reducer state :', state);
+      const nextState = state.rockets.map((rocket) => (
         (rocket.id !== action.payload) ? rocket : { ...rocket, reserv: true }));
-      return [...nextState];
+      return { ...state, ...nextState };
     }
     case actions.GET_ROCKETS:
       console.log('action pay ', action.payload);
