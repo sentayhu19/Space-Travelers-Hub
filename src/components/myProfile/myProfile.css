@@ -9,3 +9,21 @@ td {
 .mission-title {
   margin: 10px 5%;
 }
+
+.heading-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 30%;
+}
+
+.joined-missions {
+  display: flex;
+}
+
+.joined-mission-table1 {
+  width: 45%;
+}
+
+.reserve {
+  margin-right: 37%;
+}
