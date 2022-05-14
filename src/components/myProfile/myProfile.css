@@ -10,18 +10,20 @@ td {
   margin: 10px 5%;
 }
 
-.heading-title{
+.heading-title {
   display: flex;
   justify-content: space-between;
   gap: 30%;
 }
-.joined-missions{
+
+.joined-missions {
   display: flex;
 }
-.joined-mission-table1{
+
+.joined-mission-table1 {
   width: 45%;
 }
 
-.reserve{
+.reserve {
   margin-right: 37%;
 }

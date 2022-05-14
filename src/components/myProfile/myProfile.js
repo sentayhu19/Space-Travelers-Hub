@@ -16,7 +16,7 @@ const MyProfile = () => {
         <div className="missions">
           <div className="heading-title">
             <h2 className="mission-title">My Missions</h2>
-            <h2 className="reserve">My Rocket </h2>
+            <h2 className="reserve">My Rockets </h2>
           </div>
           <div className="joined-missions">
             <table className="joined-mission-table1">
