@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test the Rockets Component rockets section renders 1`] = `
+<div>
+  <myprofile />
+</div>
+`;
+
+exports[`Test the myprofile Component myprofile section renders 1`] = `
+<div>
+  <myprofile />
+</div>
+`;
+
+exports[`Test the myprofile Component rockets section renders 1`] = `
+<div>
+  <myprofile />
+</div>
+`;
