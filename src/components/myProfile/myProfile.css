@@ -1,0 +1,34 @@
+.joined-mission-table,
+tr,
+td {
+  border-collapse: collapse;
+  border: 1px solid black;
+  width: 45%;
+}
+
+.mission-title {
+  margin: 10px 5%;
+}
+
+.heading-title {
+  display: flex;
+  justify-content: space-between;
+  gap: 30%;
+}
+
+.joined-missions {
+  display: flex;
+}
+
+.joined-mission-table1 {
+  width: 45%;
+}
+
+.reserve {
+  margin-right: 37%;
+}
+
+.notmember {
+  background-color: red;
+  color: white;
+}
