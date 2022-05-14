@@ -12,19 +12,19 @@ const MyProfile = () => {
 
   const uniqueIds = [];
 
-  const unique = rocketReserved.filter(element => {
+  const unique = rocketReserved.filter((element) => {
     const isDuplicate = uniqueIds.includes(element.rocket_name);
-  
+
     if (!isDuplicate) {
       uniqueIds.push(element.rocket_name);
-  
+
       return true;
     }
-  
+
     return false;
   });
-  console.log('before filer', rocketReserved)
-console.log("after fil Data -> ",uniqueIds)
+  console.log('before filer', rocketReserved);
+  console.log('after fil Data -> ', uniqueIds);
 
   return (
     <>
