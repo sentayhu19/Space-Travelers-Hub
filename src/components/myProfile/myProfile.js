@@ -61,7 +61,7 @@ const MyProfile = () => {
 
             <table className="joined-mission-table1">
               <tbody key={generate()}>
-                { rocketempty ? <tr><td><p className="notmember">You have not reserved any missions</p></td></tr> : '' }
+                { rocketempty ? <tr><td><p className="notmember">You have not reserved any Rocket</p></td></tr> : '' }
                 {Data.map((r) => (
                   <tr key={generate()}>
                     <td key={generate()}>
