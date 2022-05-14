@@ -7,9 +7,9 @@ A web application for a company that provides commercial and scientific space tr
 <!-- ![Book store Home page (20)]() COMMING SOON -->
 
 
-<!-- ## Live demo comming soon
+## Live demo
 
-[Live Demo Link on Netlify](https://serene-zabaione-53a1d6.netlify.app/) SOON-->
+[Live Demo Link on Netlify](https://space-travlers-hub.netlify.app)
 
 ## Built With
 
